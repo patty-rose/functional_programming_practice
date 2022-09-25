@@ -23,7 +23,7 @@ function recursiveCoinCounter(money){
   }
 }
 
-//coint counter with closure:
+//coint counter with closure -- has an off by 1 bug with the pennies.:
 
 function coinCounterClosure(coinValue){
   const coin = coinValue;
