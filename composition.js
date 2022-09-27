@@ -1,4 +1,3 @@
-
 //composition doesn't care about objects, it cares about what objects can DO. Here's a canEat function utilizing closure. Anything assigned to this function canEat.
 const canEat = (creature) => ({
   eat: (food) => {
