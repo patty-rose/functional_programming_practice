@@ -26,3 +26,7 @@ const platypus = sleepingEatingCreature("platypus");
 console.log(platypus);
 console.log(platypus.eat("eggs"));
 console.log(platypus.sleep());
+
+const paints = (color) => {
+  return `Paints ${color}`;
+}
