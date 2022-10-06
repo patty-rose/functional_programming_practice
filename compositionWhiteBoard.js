@@ -83,3 +83,40 @@ const robot = (name) => {
 
 const superBee = robot("Super Bee");
 console.log(superBee.throw(10)(20));
+
+
+// Problem #4
+// First use closures to create three dance moves. For instance, a dancer should be able to do the following:
+
+// > dancer.samba()
+// "The dancer sambas!"
+// > dancer.tango()
+// "The dancer tangos!"
+
+const sambaDance = (dancer) => ({
+  samba: function(){
+    return `The ${dancer.name} sambas!`
+  }
+});
+
+const tangoDance = (dancer) => ({
+  tango: function(){
+    return `The ${dancer.name} tangos!`
+  }
+});
+
+const chachaDance = (dancer) => ({
+  chacha: function(){
+    return `The ${dancer.name} chachas!`
+  }
+});
+
+const dancePerson = (name) => {
+  let dancer = {
+    name
+  }
+  return {...dancer, ...sambaDance(dancer), ...tangoDance(dancer), ...chachaDance(dancer)};
+}
+
+const ballerina = dancePerson("ballerina");
+console.log(ballerina.chacha(), ballerina.tango(), ballerina.samba());
